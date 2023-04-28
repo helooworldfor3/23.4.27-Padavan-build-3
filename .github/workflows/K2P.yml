@@ -73,7 +73,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_VSFTPD=n" >> .config #ddnsto  ~0.5M
         echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=n" >> .config  #阿里云盘  ~3m
         echo "CONFIG_FIRMWARE_INCLUDE_SAMBA=n" >> .config #aliddns
-        echo "CONFIG_FIRMWARE_INCLUDE_OPKG=N" >> .config #smartdns
+        echo "CONFIG_FIRMWARE_INCLUDE_OPKG=n" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_UPNP=y" >> .config #smartdns
         else
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config #SCUTCLIENT

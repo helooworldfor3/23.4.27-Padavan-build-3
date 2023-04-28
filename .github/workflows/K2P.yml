@@ -59,13 +59,13 @@ jobs:
         #因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ################################################################################################
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FLOWOFFLOAD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_UPNP/d' .config
         ######################################################################
         if [ $KERNEL = "3.4" ] ; then
-        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config #adbyby plus+
+        #echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> .config #adbyby plus+
         echo "CONFIG_FIRMWARE_INCLUDE_ARIANG=n" >> .config #DNSFORWARDER
         echo "CONFIG_FIRMWARE_INCLUDE_FLOWOFFLOAD=y" >> .config #可以不集成
         echo "CONFIG_FIRMWARE_INCLUDE_HD-IDLE=n" >> .config #集成xray执行文件  ~4.5M
